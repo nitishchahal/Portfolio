@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nitish Choudhary's personal portfolio showcasing web development projects, blog, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Nitish Choudhary's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-rLj8td6mT0Niz45sKkFXJD6c4FIMt0/l3TgiRPt8twvnSgnKrEbNH7lDFLfM/iE2yBv7TFLQUx2p1sYtTvXIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            color: #333333;
+        }
+
+        .transition-transform {
+            transition: transform 0.3s ease;
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-future {
+            animation: futureAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes futureAnimation {
+            0% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.03) rotate(3deg);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.show {
+            transform: translateX(0);
+        }
+
+        .center-heading {
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-gradient-to-r from-black via-red-700 to-red-500 py-4 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white animate-fade-in">Nitish Choudhary</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-white hover:underline transition-transform hover:scale-105">About Me</a></li>
+                    <li><a href="#journey" class="text-white hover:underline transition-transform hover:scale-105">My Journey</a></li>
+                    <li><a href="#portfolio" class="text-white hover:underline transition-transform hover:scale-105">Portfolio</a></li>
+                    <li><a href="#blog" class="text-white hover:underline transition-transform hover:scale-105">Learning</a></li>
+                    <li><a href="#contact" class="text-white hover:underline transition-transform hover:scale-105">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden text-3xl text-white cursor-pointer menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar fixed top-0 left-0 h-full w-64 bg-gradient-to-r from-black via-red-700 to-red-500 z-40 p-4">
+        <div class="flex justify-end">
+            <div class="text-3xl text-white cursor-pointer close-toggle">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <ul class="mt-8 space-y-6">
+            <li><a href="#about" class="text-white hover:underline transition-transform hover:scale-105">About Me</a></li>
+            <li><a href="#journey" class="text-white hover:underline transition-transform hover:scale-105">My Journey</a></li>
+            <li><a href="#portfolio" class="text-white hover:underline transition-transform hover:scale-105">Portfolio</a></li>
+            <li><a href="#blog" class="text-white hover:underline transition-transform hover:scale-105">Blog</a></li>
+            <li><a href="#contact" class="text-white hover:underline transition-transform hover:scale-105">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 pt-20  grid gap-12">
+        <!-- About Me Section -->
+        <section id="about"
+            class="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300 p-8 rounded-lg shadow-lg animate-fade-in">
+            <!-- Text Content -->
+            <div class="flex flex-col space-y-4">
+                <h2 class="text-4xl font-semibold mb-4">About Me</h2>
+                <ul class="list-disc list-inside space-y-4">
+                    <li>Hello! I'm Nitish Choudhary, a passionate student at the Institute of Engineering and
+                        Technology, DAVV, pursuing a degree in Information Technology. With a keen interest in web
+                        development, I am currently honing my skills in various technologies like grid, flex, and
+                        Tailwind CSS.</li>
+                    <li><strong>My Journey:</strong> I completed my 10th in 2020 and 12th in 2022, securing 85% in my
+                        12th exams. Throughout my academic journey, I have developed a strong foundation in Design and
+                        Algorithm (DSA), web development, and designing. My goal is to create visually appealing and
+                        highly functional websites.</li>
+                    <li><strong>Interests:</strong> Apart from coding, I have a deep passion for video editing,
+                        photography, and photo editing. I also enjoy playing Kabaddi, which helps me stay active and
+                        energized. I am fluent in multiple languages, including English, Hindi, Punjabi, and Urdu.</li>
+                    <li><strong>Skills:</strong> Web Development: HTML, CSS, JavaScript, Tailwind CSS. Design: Adobe
+                        Photoshop, Davinci Resolve. Languages: English, Hindi, Punjabi, Urdu.</li>
+                    <li><strong>Personal Projects:</strong> Currently, I am working on an exciting web project,
+                        experimenting with modern CSS frameworks and techniques. I am committed to continuous learning
+                        and staying updated with the latest trends in web development.</li>
+                </ul>
+            </div>
+            <!-- Image Content -->
+            <div class="flex justify-center items-center">
+                <img src="image/image~2.jpg" alt="Profile Image"
+                    class="w-full max-w-md h-auto object-cover rounded-lg shadow-lg transition-transform hover:scale-105">
+            </div>
+        </section>
+
+        <!-- My Journey Section -->
+        <section id="journey"
+            class="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 p-8 rounded-lg shadow-lg animate-fade-in">
+            <h2 class="text-4xl font-semibold mb-6">My Journey</h2>
+            <div class="md:flex md:space-x-8">
+                <div class="md:w-1/2 flex flex-col space-y-4">
+                    <p class="text-lg">My adventure into the world of technology began with a spark of curiosity and a
+                        passion for creation. After completing my 10th grade in 2020, I embarked on a journey that would
+                        shape my future in unimaginable ways. By 2022, I had not only secured 85% in my 12th exams but
+                        also laid a solid foundation in the dynamic fields of Data Structures and Algorithms (DSA), web
+                        development, and design.</p>
+                    <p class="text-lg">At the Institute of Engineering and Technology, DAVV, I'm diving deep into the
+                        fascinating world of Information Technology. Each day, I immerse myself in coding, experimenting
+                        with grid and flex layouts, and mastering CSS to craft visually stunning and functional
+                        websites. My journey is fueled by an unending desire to learn and innovate.</p>
+
+                    <h3 class="text-2xl font-semibold">Milestones and Achievements</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Scored 85% in 12th exams, showcasing my dedication and hard work.</li>
+                        <li>Developed a strong grasp of DSA, an essential foundation for my coding journey.</li>
+                        <li>Created numerous personal projects utilizing HTML, CSS, and JavaScript.</li>
+                        <li>Developed a personal website that serves as a portfolio and a blog to document my learning
+                            journey.</li>
+                        <li>Mastered grid and flex layout techniques, enabling me to design responsive and user-friendly
+                            interfaces.</li>
+                        <li>Proficient in Adobe Photoshop and Davinci Resolve, allowing me to bring my creative visions
+                            to life.</li>
+                        <li>Engaged in photo editing and video editing projects, blending technical skills with artistic
+                            flair.</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 flex justify-center items-center mt-6 md:mt-0">
+                    <img src="image/image2.jpeg" alt="Journey Image"
+                        class="w-full max-w-lg h-auto object-cover rounded-lg shadow-lg transition-transform hover:scale-105">
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold mt-8">Hobbies and Interests</h3>
+            <p class="text-lg">Beyond the realm of coding, I find joy in capturing moments through my camera lens.
+                Photography has always been a passion, and I love transforming photos with creative edits, giving each
+                image a unique touch. My experience with Adobe Photoshop has enhanced my ability to turn ordinary shots
+                into extraordinary visuals.</p>
+            <p class="text-lg">Video editing is another area where I channel my creativity. Crafting engaging content
+                that tells a story is both challenging and rewarding. With tools like Davinci Resolve, I bring my ideas
+                to life, creating videos that captivate and inspire.</p>
+            <p class="text-lg">Playing Kabaddi keeps me agile and disciplined, instilling a sense of teamwork and
+                perseverance that I bring into every project. The thrill of the game and the camaraderie with teammates
+                fuel my determination to excel in all areas of my life.</p>
+
+            <h3 class="text-2xl font-semibold mt-8">Vision for the Future</h3>
+            <p class="text-lg">As I continue to grow and evolve, my vision is to become a full-stack developer who not
+                only excels in technical skills but also creates user-centric and aesthetically pleasing web
+                applications. My journey is an ongoing adventure, and I am excited to see where it leads me next.</p>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio"
+            class="bg-gradient-to-r from-red-100 via-red-200 to-red-300 p-8 rounded-lg shadow-lg animate-fade-in">
+            <h2 class="text-4xl font-semibold mb-6">Portfolio</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Personal Website</h3>
+                    <p class="text-lg">A personal website showcasing my portfolio and blog about my learning journey. I
+                        utilized Tailwind CSS for styling and modern CSS techniques like grid and flex layouts.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Technologies: HTML, CSS, JavaScript, Tailwind CSS</li>
+                        <li>Features: Responsive design, interactive elements, blog section</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Web Development Blog</h3>
+                    <p class="text-lg">A blog where I share tutorials, project showcases, and insights about web
+                        development. The blog covers a range of topics including Tailwind CSS, Grid, and Flexbox.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Technologies: HTML, CSS, JavaScript, Tailwind CSS</li>
+                        <li>Features: Tutorial guides, project case studies, web development tips</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Photography Portfolio</h3>
+                    <p class="text-lg">A photography portfolio showcasing my best shots and photo editing skills. I use
+                        Adobe Photoshop to enhance images and create visually stunning compositions.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Technologies: Adobe Photoshop</li>
+                        <li>Features: Photo galleries, before-and-after editing comparisons, photography tips</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Video Editing Projects</h3>
+                    <p class="text-lg">A collection of video editing projects that showcase my skills in creating
+                        engaging content. I use Adobe Premiere Pro to craft videos that captivate and tell a story.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Technologies: Adobe Premiere Pro</li>
+                        <li>Features: Video galleries, editing techniques, storytelling through video</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog"
+            class="bg-gradient-to-r from-green-100 via-green-200 to-green-300 p-8 rounded-lg shadow-lg animate-fade-in">
+            <h2 class="text-4xl font-semibold mb-6">Learning</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Learning Tailwind CSS</h3>
+                    <p class="text-lg">A comprehensive guide on getting started with Tailwind CSS. Learn how to create
+                        beautiful and responsive designs with this utility-first CSS framework.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Mastering Grid Layout</h3>
+                    <p class="text-lg">An in-depth look at CSS Grid Layout. Discover how to create complex and
+                        responsive layouts with ease using CSS Grid.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Flexbox Essentials</h3>
+                    <p class="text-lg">A step-by-step guide to mastering Flexbox. Learn how to create flexible and
+                        responsive layouts with this powerful CSS layout model.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Integrating APIs</h3>
+                    <p class="text-lg">Learn how to integrate third-party APIs into your web projects. This tutorial
+                        covers the basics of working with APIs and how to fetch and display data.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact"
+            class="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 p-8 rounded-lg shadow-lg animate-fade-in">
+            <h2 class="text-4xl font-semibold mb-6">Contact</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Information -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="text-lg">Feel free to reach out to me for collaborations, project inquiries, or just to
+                        connect!</p>
+                    <ul class="list-disc list-inside space-y-2 mt-4">
+                        <li><strong>Email:</strong> nitishchoudharyc2@example.com</li>
+                        <li><strong>Phone:</strong> +123-456-7890</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-xl font-semibold">Connect with me on other platforms:</h4>
+                        <ul class="flex flex-wrap space-x-4 mt-2">
+                            <li><a href="https://www.linkedin.com/in/nitish-choudhary-0a2a19249" target="_blank"
+                                    class="text-blue-500 hover:underline">LinkedIn</a></li>
+                            <li><a href="https://x.com/NitishChahal_?t=7vtG57N4S8MYSVkgKioYgA&s=09" target="_blank"
+                                    class="text-blue-500 hover:underline">Twitter</a></li>
+                            <li><a href="https://github.com/nitishchahal" target="_blank"
+                                    class="text-blue-500 hover:underline">GitHub</a></li>
+                            <li><a href="https://www.geeksforgeeks.org/user/nitishchahal_/" target="_blank"
+                                    class="text-blue-500 hover:underline">GeeksforGeeks</a></li>
+                            <li><a href="https://leetcode.com/u/nitishch22/" target="_blank"
+                                    class="text-blue-500 hover:underline">LeetCode</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 animate-fade-in mt-4 sm:mt-6">
+                    <h3 class="text-2xl font-semibold mb-4">Contact Form</h3>
+                    <form action="https://formspree.io/f/movadkbr" method="POST" class="space-y-4" target="_blank">
+                        <div>
+                            <label for="name" class="block text-lg font-medium">Name:</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full p-2 border border-gray-300 rounded-lg" required placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium">Email:</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full p-2 border border-gray-300 rounded-lg" required
+                                placeholder="Your email id">
+                        </div>
+                        <div>
+                            <label for="Phone" class="block text-lg font-medium">Phone no:</label>
+                            <input type="number" id="Phone" name="Phone"
+                                class="w-full p-2 border border-gray-300 rounded-lg" required placeholder="Phone no">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg font-medium">Message:</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full p-2 border border-gray-300 rounded-lg" required
+                                placeholder="Enter your message.."></textarea>
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-transform hover:scale-105">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Nitish Choudhary. All rights reserved.</p>
+        </div>
+    </footer>
+
+   
+
+</body>
+
+</html>
